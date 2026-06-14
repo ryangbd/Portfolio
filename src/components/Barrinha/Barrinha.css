@@ -1,0 +1,6 @@
+/*barrinha very nice*/
+.barrinha{
+  width: 60vw;
+  height: 2px;
+  background: radial-gradient(circle, #00c896,#0c0e19);
+}

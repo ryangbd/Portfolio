@@ -1,3 +1,4 @@
+import './SobreMim.css'
 function SobreMim() {
   const cardsEsquerda = [
     { titulo: "Frontend", descricao: "Interfaces modernas e responsivas." },

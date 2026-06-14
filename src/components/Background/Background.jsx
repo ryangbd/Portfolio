@@ -1,3 +1,4 @@
+import './Background.css'
 // components/Background.jsx
 function Background({ children }) {
   return (

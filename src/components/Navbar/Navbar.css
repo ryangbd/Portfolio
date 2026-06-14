@@ -1,0 +1,26 @@
+nav{
+  width: 99vw;
+  padding: 1em 0 1em 0;
+  display: flex;
+  justify-content: center;
+  gap:2rem;
+  border-bottom: #161616  2.5px solid;
+}
+nav button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  display: flex;
+  cursor: pointer;
+}
+
+nav button a {
+  text-decoration: none;
+  color: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+  transition: 0.1s;
+}
+nav button a:hover{
+  color:#00c896;
+}

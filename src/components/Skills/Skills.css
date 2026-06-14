@@ -1,0 +1,82 @@
+.skills{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding:80px 120px;
+}
+.skills span{
+    font-size: 1.5rem;
+    color:#f8f8f8;
+    margin:0 0 2rem 0;
+    font-weight: 600;
+}
+.skills span:nth-child(1){
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #00c896;
+  margin-bottom: 0.5rem;
+}
+.skills .title{
+    font-size:2rem;
+}
+.card-section{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.card{
+  background-color: #161616;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  min-height: 30px;
+  gap: 6px;
+  color:#00c896;
+}
+.card-itens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.item {
+    background-color: #252525;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.item svg {
+    transition: 0.2s ease-in-out;
+    width: 2.5rem;
+    height: auto;
+}
+.item:hover svg{
+    transform: scale(1.2);
+    filter: drop-shadow(#00c89675 0px 0px 2px);
+}
+.item span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #f8f8f8;
+    text-transform: uppercase;
+    text-align: center;
+    margin:0;
+    transition: 0.2s ease-in-out;
+}
+.item:hover span{
+    color:#00c896;
+}
