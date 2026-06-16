@@ -1,10 +1,12 @@
 nav{
-  width: 99vw;
+  width: 100vw;
   padding: 1em 0 1em 0;
   display: flex;
   justify-content: center;
   gap:2rem;
-  border-bottom: #161616  2.5px solid;
+  position: fixed;
+  background: linear-gradient(180deg,#000000,#0c0e1900);
+  z-index:2;
 }
 nav button {
   border: none;
