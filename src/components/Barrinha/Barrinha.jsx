@@ -1,9 +1,9 @@
 import './Barrinha.css'
-function Barrinha(){
+import useReveal from "../../hooks/useReveal"
+
+export default function Barrinha(){
+    const ref = useReveal()
     return(
-        <>
-            <div className="barrinha"></div>
-        </>
+            <div className="barrinha reveal" ref={ref}></div>
     )
 }
-export default Barrinha

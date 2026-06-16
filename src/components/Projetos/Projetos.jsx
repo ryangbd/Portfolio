@@ -1,13 +1,13 @@
 import './Projetos.css'
+import useReveal from "../../hooks/useReveal"
 
-function Projetos(){
+export default function Projetos(){
+    const ref = useReveal()
     return (
-        <section id="projetos" className="projetos">
+        <section id="projetos" className="projetos reveal" ref={ref}>
             <div className="card">
 
             </div>
         </section>
     )
 }
-
-export default Projetos

@@ -1,7 +1,9 @@
 import './Skills.css'
 import { DiJavascript1, DiMysql, DiReact, DiPython, DiHtml5, DiCss3, DiJava, DiGithubBadge, DiPhotoshop, DiVisualstudio } from 'react-icons/di'
+import useReveal from "../../hooks/useReveal"
 
-function Skills(){
+export default function Skills(){
+    const ref = useReveal()
     const categoria = [
         {
             titulo: "FRONT-END",
@@ -35,7 +37,7 @@ function Skills(){
         },
     ]
     return (
-        <section id="skills" className="skills">
+        <section id="skills" className="skills reveal" ref={ref}>
             <span>COMPETÊNCIAS</span>
             <span className="title">MINHAS HABILIDADES</span>
             <div className="card-section">
@@ -56,5 +58,3 @@ function Skills(){
         </section>
     )
 }
-
-export default Skills

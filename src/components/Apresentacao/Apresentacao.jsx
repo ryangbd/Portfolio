@@ -1,8 +1,12 @@
 import pfp from '../../assets/pfp.webp'
 import './Apresentacao.css'
-function Apresentacao() {
+import useReveal from "../../hooks/useReveal"
+
+export default function Apresentacao() {  
+  const ref = useReveal()
   return (
-    <>
+    <section ref={ref} className='reveal'>
+
     <div className="apresent">
       <div className="secao1">
         <span>Olá, me chamo Ryan</span>
@@ -28,7 +32,6 @@ function Apresentacao() {
         <img src={pfp} />
       </div>
     </div>
-        </>
+    </section>
   )
 }
-export default Apresentacao

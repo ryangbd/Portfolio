@@ -1,5 +1,8 @@
 import './SobreMim.css'
-function SobreMim() {
+import useReveal from "../../hooks/useReveal"
+
+export default function SobreMim() {
+  const ref = useReveal()
   const cardsEsquerda = [
     { titulo: "Frontend", descricao: "Interfaces modernas e responsivas." },
     { titulo: "Full Stack", descricao: "Em crescimento contínuo." },
@@ -14,7 +17,7 @@ function SobreMim() {
   ];
 
   return (
-    <section id="sobre" className="sobre">
+    <section id="sobre" className="sobre reveal" ref={ref}>
       <div className="sobre-esquerda">
         <span className="sobre-label">SOBRE MIM</span>
         {cardsEsquerda.map((card, i) => (
@@ -47,5 +50,3 @@ function SobreMim() {
     </section>
   );
 }
-
-export default SobreMim;
