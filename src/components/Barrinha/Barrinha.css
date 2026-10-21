@@ -1,6 +1,6 @@
-/*barrinha very nice*/
-.barrinha{
-  width: 60vw;
+.barrinha {
+  width: min(100% - 2 * var(--margem), 56rem);
   height: 2px;
-  background: radial-gradient(circle, #00c896,#0c0e19);
+  margin-inline: auto;
+  background: linear-gradient(90deg, transparent, rgba(0, 200, 150, 0.7), transparent);
 }

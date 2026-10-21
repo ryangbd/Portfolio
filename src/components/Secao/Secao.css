@@ -1,0 +1,4 @@
+.secao {
+  width: 100%;
+  padding-block: var(--espaco-secao);
+}

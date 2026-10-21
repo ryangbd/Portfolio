@@ -1,0 +1,18 @@
+.titulo {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 40rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.titulo h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.titulo p {
+  color: var(--texto-suave);
+  font-size: 1.1rem;
+}

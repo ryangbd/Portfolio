@@ -1,28 +1,48 @@
-nav{
-  width: 100vw;
-  padding: 1em 0 1em 0;
-  display: flex;
-  justify-content: center;
-  gap:2rem;
+.navbar {
   position: fixed;
-  background: linear-gradient(180deg,#000000,#0c0e1900);
-  z-index:2;
-}
-nav button {
-  border: none;
-  background-color: transparent;
-  font-size: 1.5rem;
-  display: flex;
-  cursor: pointer;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  background-color: rgba(11, 13, 24, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--borda);
 }
 
-nav button a {
-  text-decoration: none;
-  color: #f8f8f8;
-  position: relative;
-  overflow: hidden;
-  transition: 0.1s;
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding-block: 0.9rem;
 }
-nav button a:hover{
-  color:#00c896;
+
+.navbar a {
+  position: relative;
+  padding-block: 0.25rem;
+  color: var(--texto-suave);
+  font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background-color: var(--destaque);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.navbar a:hover,
+.navbar a.ativo {
+  color: var(--texto);
+}
+
+.navbar a:hover::after,
+.navbar a.ativo::after {
+  transform: scaleX(1);
 }

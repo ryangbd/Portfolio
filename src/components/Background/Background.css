@@ -1,23 +1,7 @@
-/*background*/
-.gradient-background {
-  background: linear-gradient(187deg,#0d0f1a,#0c0e19);
-  background-size: 120% 120%;
-  min-height: 100vh;
+.fundo {
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  animation: gradient-animation 12s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--fundo);
 }

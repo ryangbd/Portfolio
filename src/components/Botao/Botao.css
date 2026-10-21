@@ -1,0 +1,64 @@
+.botao {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7em 1.3em;
+  border: 1px solid var(--destaque);
+  border-radius: var(--raio-pill);
+  color: var(--texto);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.2;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.botao svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  color: var(--destaque);
+  transition: color 0.3s ease;
+}
+
+.botao::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--destaque);
+  transform: translateX(-101%);
+  transition: transform 0.3s ease;
+}
+
+.botao:hover {
+  color: var(--destaque-escuro);
+  box-shadow: 0 0 18px rgba(0, 200, 150, 0.3);
+}
+
+.botao:hover svg {
+  color: var(--destaque-escuro);
+}
+
+.botao:hover::before {
+  transform: translateX(0);
+}
+
+.botao--primario {
+  background-color: var(--destaque);
+  color: var(--destaque-escuro);
+}
+
+.botao--primario svg {
+  color: var(--destaque-escuro);
+}
+
+.botao--primario::before {
+  display: none;
+}
+
+.botao--primario:hover {
+  background-color: var(--destaque-claro);
+}

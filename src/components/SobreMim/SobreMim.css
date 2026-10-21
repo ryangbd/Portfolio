@@ -1,78 +1,73 @@
-/*sobre mim*/
-.sobre {
-  display: flex;
-  gap: 60px;
-  padding: 80px 120px;
-}
-
-.sobre-esquerda {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  min-width: 280px;
-}
-
-.sobre-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: #00c896;
-}
-
-.card-esquerda {
-  background-color: #161616;
-  border-radius: 12px;
-  padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.card-esquerda strong {
-  color: #ffffff;
-  font-size: 1.1rem;
-}
-
-.card-esquerda span {
-  color: #a0a3b1;
-  font-size: 0.9rem;
-}
-
-.sobre-direita {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.sobre-texto {
-  color: #a0a3b1;
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.cards-direita {
+.sobre-conteudo {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: start;
+  gap: clamp(2rem, 6vw, 5rem);
 }
 
-.card-direita {
-  background-color: #161616;
-  border-radius: 12px;
-  padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.sobre-focos {
+  display: grid;
+  gap: 1.25rem;
 }
 
-.card-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: #00c896;
+.sobre-focos li {
+  display: grid;
+  gap: 0.15rem;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--destaque);
 }
 
-.card-valor {
-  color: #ffffff;
+.sobre-focos strong {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.sobre-focos span {
+  color: var(--texto-suave);
+}
+
+.sobre-detalhes {
+  display: grid;
+  gap: 2rem;
+}
+
+.sobre-detalhes p {
+  max-width: 62ch;
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+}
+
+.sobre-fatos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+}
+
+.sobre-fatos div {
+  display: grid;
+  gap: 0.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--borda-forte);
+}
+
+.sobre-fatos dt {
+  color: var(--destaque);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.sobre-fatos dd {
   font-size: 1.1rem;
+}
+
+@media (max-width: 820px) {
+  .sobre-conteudo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .sobre-fatos {
+    grid-template-columns: 1fr;
+  }
 }

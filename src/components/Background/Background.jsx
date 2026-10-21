@@ -2,7 +2,7 @@ import './Background.css'
 // components/Background.jsx
 function Background({ children }) {
   return (
-    <div className="gradient-background">
+    <div className="fundo">
       {children}
     </div>
   )

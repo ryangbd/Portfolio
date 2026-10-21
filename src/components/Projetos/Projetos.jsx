@@ -1,13 +1,18 @@
 import './Projetos.css'
-import useReveal from "../../hooks/useReveal"
+import Secao from '../Secao/Secao.jsx'
+import Titulo from '../Titulo/Titulo.jsx'
+import CardProjeto from '../CardProjeto/CardProjeto.jsx'
+import { projetos } from '../../data/projetos.js'
 
-export default function Projetos(){
-    const ref = useReveal()
-    return (
-        <section id="projetos" className="projetos reveal" ref={ref}>
-            <div className="card">
-
-            </div>
-        </section>
-    )
+export default function Projetos() {
+  return (
+    <Secao id="projetos">
+      <Titulo texto="Alguns dos projetos que desenvolvi nos estudos.">Projetos</Titulo>
+      <div className="projetos-grid">
+        {projetos.map((projeto, i) => (
+          <CardProjeto key={projeto.nome} destaque={i === 0} {...projeto} />
+        ))}
+      </div>
+    </Secao>
+  )
 }

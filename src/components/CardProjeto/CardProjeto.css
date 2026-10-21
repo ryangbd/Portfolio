@@ -1,0 +1,73 @@
+.card-projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem;
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  transition: border-color 0.25s ease;
+}
+
+.card-projeto:hover {
+  border-color: rgba(0, 200, 150, 0.5);
+}
+
+.card-projeto h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.card-projeto p {
+  max-width: 60ch;
+  color: var(--texto-suave);
+}
+
+.card-projeto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.card-projeto-tags li {
+  padding: 0.2rem 0.75rem;
+  background-color: var(--destaque-suave);
+  border-radius: var(--raio-pill);
+  color: var(--destaque);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.card-projeto-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.card-projeto-link:hover {
+  color: var(--destaque);
+}
+
+.card-projeto-link svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.card-projeto--destaque {
+  grid-column: 1 / -1;
+  gap: 1.25rem;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.card-projeto--destaque h3 {
+  font-size: clamp(1.6rem, 3.4vw, 2.25rem);
+}
+
+.card-projeto--destaque p {
+  font-size: 1.1rem;
+}
